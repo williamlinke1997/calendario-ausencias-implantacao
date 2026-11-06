@@ -18,7 +18,8 @@ const ABSENCES = [
   { name: "Kellen de Barros Lisboa", type: "Férias", start: "2026-12-28", end: "2027-01-01", status: "Planejado" },
   { name: "Stefane", type: "Férias", start: "2026-12-28", end: "2027-01-11", status: "Planejado" },
   { name: "Guilherme Weide Rodrigues Martins", type: "Férias", start: "2026-12-29", end: "2027-01-04", status: "Planejado" },
-  { name: "Alice Bitello", type: "Férias", start: "2027-01-04", end: "2027-01-18", status: "Planejado" }
+  { name: "Alice Bitello", type: "Férias", start: "2027-01-04", end: "2027-01-18", status: "Planejado" },
+  { name: "Guilherme Weide Rodrigues Martins", type: "Férias", start: "2027-01-20", end: "2027-02-11", status: "Planejado" }
 ].map(item => ({ ...item, person: TEAM.find(person => person.name === item.name) || {} }));
 
 const TYPE_COLORS = {
