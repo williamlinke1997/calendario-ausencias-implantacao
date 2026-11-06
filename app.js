@@ -10,7 +10,8 @@ const TEAM = [
   { name: "Stefane", role: "ISM JR", photo: "https://res.cloudinary.com/zvmqr5hs/image/upload/v1787769160/baymax/implantacao/zjytfprcpyril79zkhcj.webp" },
   { name: "Susana Bletsch", role: "ISM I", photo: "https://res.cloudinary.com/zvmqr5hs/image/upload/v1787769220/baymax/implantacao/vuqlgdzh2lzaj80sraoa.webp" },
   { name: "Vitoria Tainara Dalavera Alba", role: "ISM JR", photo: "https://res.cloudinary.com/zvmqr5hs/image/upload/v1787768683/baymax/implantacao/fouaadwpmeccdapqpnfb.webp" },
-  { name: "Wagner Garcia Teixeira", role: "ISM JR", photo: "https://res.cloudinary.com/zvmqr5hs/image/upload/v1787834629/baymax/implantacao/q9uj0gquqtode94n2ck0.webp" }
+  { name: "Wagner Garcia Teixeira", role: "ISM JR", photo: "https://res.cloudinary.com/zvmqr5hs/image/upload/v1787834629/baymax/implantacao/q9uj0gquqtode94n2ck0.webp" },
+  { name: "William Linke Medeiros", role: "Supervisor de Ativação", photo: "https://williamlinke1997.github.io/calendario-ausencias-implantacao/william-linke-medeiros.webp" }
 ];
 
 const ABSENCES = [
@@ -19,12 +20,15 @@ const ABSENCES = [
   { name: "Stefane", type: "Férias", start: "2026-12-28", end: "2027-01-11", status: "Planejado" },
   { name: "Guilherme Weide Rodrigues Martins", type: "Férias", start: "2026-12-29", end: "2027-01-04", status: "Planejado" },
   { name: "Alice Bitello", type: "Férias", start: "2027-01-04", end: "2027-01-18", status: "Planejado" },
-  { name: "Guilherme Weide Rodrigues Martins", type: "Férias", start: "2027-01-20", end: "2027-02-11", status: "Planejado" }
+  { name: "Guilherme Weide Rodrigues Martins", type: "Férias", start: "2027-01-20", end: "2027-02-11", status: "Planejado" },
+  { name: "William Linke Medeiros", type: "Evento Saipos", start: "2027-11-10", end: "2027-11-10", status: "Aprovado" },
+  { name: "Wagner Garcia Teixeira", type: "Evento Saipos", start: "2027-11-10", end: "2027-11-10", status: "Aprovado" }
 ].map(item => ({ ...item, person: TEAM.find(person => person.name === item.name) || {} }));
 
 const TYPE_COLORS = {
   "Férias": "#7057d9", "Folga": "#ee7c72", "Atestado": "#32a983",
-  "Licença": "#4e89d8", "Treinamento": "#db9d2d", "Banco de horas": "#9c66bc"
+  "Licença": "#4e89d8", "Treinamento": "#db9d2d", "Banco de horas": "#9c66bc",
+  "Evento Saipos": "#ef8354"
 };
 
 const state = {

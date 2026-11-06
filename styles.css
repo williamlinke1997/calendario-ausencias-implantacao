@@ -99,6 +99,7 @@ button { font: inherit; }
 .event[data-type="Licença"] { --event:#4e89d8; --event-bg:#eaf3ff; }
 .event[data-type="Treinamento"] { --event:#db9d2d; --event-bg:#fff7df; }
 .event[data-type="Banco de horas"] { --event:#9c66bc; --event-bg:#f7ecff; }
+.event[data-type="Evento Saipos"] { --event:#ef8354; --event-bg:#fff0e8; }
 .more-events { color: var(--muted); font-size: 10px; padding: 3px 5px; }
 .footnote { color: var(--muted); font-size: 11px; text-align: center; margin: 15px 0 0; }
 .footnote span { color: #56c49a; }
