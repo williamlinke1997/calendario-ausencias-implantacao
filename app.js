@@ -21,8 +21,9 @@ const ABSENCES = [
   { name: "Guilherme Weide Rodrigues Martins", type: "Férias", start: "2026-12-29", end: "2027-01-04", status: "Planejado" },
   { name: "Alice Bitello", type: "Férias", start: "2027-01-04", end: "2027-01-18", status: "Planejado" },
   { name: "Guilherme Weide Rodrigues Martins", type: "Férias", start: "2027-01-20", end: "2027-02-11", status: "Planejado" },
-  { name: "William Linke Medeiros", type: "Evento Saipos", start: "2027-11-10", end: "2027-11-10", status: "Aprovado" },
-  { name: "Wagner Garcia Teixeira", type: "Evento Saipos", start: "2027-11-10", end: "2027-11-10", status: "Aprovado" }
+  { name: "William Linke Medeiros", type: "Evento Saipos", start: "2026-11-10", end: "2026-11-10", status: "Aprovado" },
+  { name: "Wagner Garcia Teixeira", type: "Evento Saipos", start: "2026-11-10", end: "2026-11-10", status: "Aprovado" },
+  { name: "Wagner Garcia Teixeira", type: "Folga", start: "2026-11-23", end: "2026-11-23", status: "Aprovado" }
 ].map(item => ({ ...item, person: TEAM.find(person => person.name === item.name) || {} }));
 
 const TYPE_COLORS = {
