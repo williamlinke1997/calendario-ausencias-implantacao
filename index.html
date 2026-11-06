@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f5ff">
+  <title>Calendário de Ausências | Implantação</title>
+  <meta name="description" content="Calendário visual de férias e ausências da equipe de Implantação.">
+  <link rel="preconnect" href="https://res.cloudinary.com">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Calendário de Ausências">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><rect x="5" y="7" width="22" height="20" rx="6"/><path d="M10 4v6M22 4v6M5 13h22"/></svg>
+        </span>
+        <span><strong>Ausências</strong><small>Equipe de Implantação</small></span>
+      </a>
+      <div class="top-actions">
+        <span class="live-dot"><i></i> Calendário da equipe</span>
+        <button class="icon-button" id="helpButton" aria-label="Como usar" title="Como usar">?</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">PLANEJAMENTO DA EQUIPE</p>
+          <h1>Quem estará fora?</h1>
+          <p class="hero-copy">Veja férias e ausências de forma rápida, visual e organizada.</p>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <span class="orb orb-one"></span><span class="orb orb-two"></span>
+          <svg viewBox="0 0 210 130"><rect x="22" y="25" width="166" height="94" rx="18"/><path d="M22 53h166M55 13v25M154 13v25"/><circle cx="57" cy="77" r="7"/><circle cx="88" cy="77" r="7"/><circle cx="119" cy="77" r="7"/><circle cx="150" cy="77" r="7"/><circle cx="57" cy="101" r="7"/><circle cx="88" cy="101" r="7"/><path class="hero-check" d="m113 101 7 7 16-18"/></svg>
+        </div>
+      </section>
+
+      <section class="metrics" aria-label="Resumo do mês">
+        <article class="metric-card metric-purple"><span class="metric-icon">☂</span><div><strong id="peopleCount">0</strong><small>Pessoas de férias</small></div></article>
+        <article class="metric-card metric-coral"><span class="metric-icon">◷</span><div><strong id="daysCount">0</strong><small>Dias de ausência</small></div></article>
+        <article class="metric-card metric-mint"><span class="metric-icon">◎</span><div><strong id="nextCount">0</strong><small>Próximas saídas</small></div></article>
+        <article class="metric-card metric-blue"><span class="metric-icon">✓</span><div><strong id="teamCount">12</strong><small>Pessoas na equipe</small></div></article>
+      </section>
+
+      <section class="calendar-panel">
+        <div class="calendar-toolbar">
+          <div class="month-navigation">
+            <button class="nav-button" id="prevMonth" aria-label="Mês anterior">‹</button>
+            <h2 id="monthLabel"></h2>
+            <button class="nav-button" id="nextMonth" aria-label="Próximo mês">›</button>
+            <button class="today-button" id="todayButton">Hoje</button>
+          </div>
+          <div class="legend" id="legend" aria-label="Filtrar por tipo"></div>
+        </div>
+
+        <div class="calendar-scroll">
+          <div class="weekdays" aria-hidden="true">
+            <span>Dom</span><span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span>
+          </div>
+          <div class="calendar-grid" id="calendarGrid" role="grid" aria-label="Calendário mensal"></div>
+        </div>
+      </section>
+
+      <p class="footnote"><span>●</span> Passe o cursor sobre uma pessoa para ver o período completo.</p>
+    </main>
+  </div>
+
+  <dialog id="helpDialog">
+    <button class="dialog-close" id="closeHelp" aria-label="Fechar">×</button>
+    <div class="dialog-icon">☀</div>
+    <h2>Como ler o calendário</h2>
+    <p>Cada faixa colorida representa uma ausência. A foto aparece em todos os dias do período para facilitar a identificação.</p>
+    <p>Use as setas para trocar de mês e clique na legenda para filtrar os tipos de ausência.</p>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
